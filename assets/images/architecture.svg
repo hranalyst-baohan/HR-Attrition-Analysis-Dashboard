@@ -1,0 +1,153 @@
+<svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" width="900" height="280">
+  <defs>
+    <style>
+      @keyframes glow1 {
+        0%,100% { filter: drop-shadow(0 0 4px #22c55e44); }
+        50%      { filter: drop-shadow(0 0 20px #22c55eaa); }
+      }
+      @keyframes glow2 {
+        0%,100% { filter: drop-shadow(0 0 4px #f59e0b44); }
+        50%      { filter: drop-shadow(0 0 20px #f59e0baa); }
+      }
+      @keyframes glow3 {
+        0%,100% { filter: drop-shadow(0 0 4px #3b82f644); }
+        50%      { filter: drop-shadow(0 0 20px #3b82f6aa); }
+      }
+      @keyframes dashMove1 {
+        from { stroke-dashoffset: 200; }
+        to   { stroke-dashoffset: 0; }
+      }
+      @keyframes dashMove2 {
+        from { stroke-dashoffset: 200; }
+        to   { stroke-dashoffset: 0; }
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+      .node1 { animation: glow1 2.8s ease-in-out infinite; }
+      .node2 { animation: glow2 2.8s ease-in-out infinite 0.5s; }
+      .node3 { animation: glow3 2.8s ease-in-out infinite 1s; }
+      .arrow1 { stroke-dasharray: 200; animation: dashMove1 1s ease-out 0.3s both; }
+      .arrow2 { stroke-dasharray: 200; animation: dashMove2 1s ease-out 1s both; }
+      .title  { animation: fadeIn 0.8s ease-out 0s both; }
+      .badges { animation: fadeIn 1s ease-out 1.8s both; }
+    </style>
+
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#052e16"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#431407"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c1a4a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+
+    <marker id="mGreen" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#22c55e"/>
+    </marker>
+    <marker id="mAmber" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="280" fill="url(#bg)" rx="18"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.035" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="80"  x2="900" y2="80"/>
+    <line x1="0" y1="160" x2="900" y2="160"/>
+    <line x1="0" y1="240" x2="900" y2="240"/>
+    <line x1="90"  y1="0" x2="90"  y2="280"/>
+    <line x1="270" y1="0" x2="270" y2="280"/>
+    <line x1="450" y1="0" x2="450" y2="280"/>
+    <line x1="630" y1="0" x2="630" y2="280"/>
+    <line x1="810" y1="0" x2="810" y2="280"/>
+  </g>
+
+  <!-- TITLE -->
+  <g class="title">
+    <text x="450" y="38" text-anchor="middle"
+      font-family="Georgia, serif" font-size="20" font-weight="700"
+      fill="#f1f5f9">HR Analytics Dashboard</text>
+    <text x="450" y="56" text-anchor="middle"
+      font-family="Arial, sans-serif" font-size="10" fill="#475569"
+      letter-spacing="3">END-TO-END DATA PIPELINE</text>
+  </g>
+
+  <!-- NODE 1 — CSV -->
+  <g class="node1" transform="translate(72, 80)">
+    <rect width="160" height="120" rx="14" fill="url(#g1)" stroke="#22c55e" stroke-width="2"/>
+    <rect x="60" y="14" width="40" height="32" rx="4" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <polyline points="86,14 100,14 100,46 60,46 60,14 86,14 86,26 100,26" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <line x1="68" y1="32" x2="92" y2="32" stroke="#4ade80" stroke-width="1.5"/>
+    <line x1="68" y1="38" x2="88" y2="38" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="80" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#22c55e">HRDataset</text>
+    <text x="80" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#86efac">CSV Source</text>
+    <rect x="20" y="95" width="120" height="16" rx="8" fill="#052e1660"/>
+    <text x="80" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4ade80">311 records</text>
+  </g>
+
+  <!-- ARROW 1 -->
+  <line class="arrow1" x1="234" y1="140" x2="348" y2="140"
+    stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" marker-end="url(#mGreen)"/>
+  <text x="291" y="130" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#22c55e">Import</text>
+
+  <!-- NODE 2 — Power BI -->
+  <g class="node2" transform="translate(354, 80)">
+    <rect width="170" height="120" rx="14" fill="url(#g2)" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="46" y="38" width="12" height="18" rx="2" fill="#fbbf24"/>
+    <rect x="62" y="28" width="12" height="28" rx="2" fill="#f59e0b"/>
+    <rect x="78" y="20" width="12" height="36" rx="2" fill="#fbbf24"/>
+    <rect x="94" y="32" width="12" height="24" rx="2" fill="#f59e0b"/>
+    <line x1="42" y1="57" x2="110" y2="57" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="85" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#f59e0b">Power BI</text>
+    <text x="85" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fcd34d">Transform &amp; Model</text>
+    <rect x="20" y="98" width="130" height="16" rx="8" fill="#43180260"/>
+    <text x="85" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fbbf24">DAX Measures</text>
+  </g>
+
+  <!-- ARROW 2 -->
+  <line class="arrow2" x1="526" y1="140" x2="640" y2="140"
+    stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#mAmber)"/>
+  <text x="583" y="130" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#f59e0b">Visualize</text>
+
+  <!-- NODE 3 — Dashboard -->
+  <g class="node3" transform="translate(646, 80)">
+    <rect width="180" height="120" rx="14" fill="url(#g3)" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="45" y="14" width="90" height="56" rx="5" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <rect x="52" y="20" width="76" height="44" rx="3" fill="#1e3a8a80"/>
+    <polyline points="58,54 68,44 78,48 88,36 98,40 108,32 118,38" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="83" y1="70" x2="83" y2="76" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="68" y1="76" x2="98" y2="76" stroke="#60a5fa" stroke-width="2"/>
+    <text x="90" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#60a5fa">Dashboard</text>
+    <rect x="20" y="98" width="140" height="16" rx="8" fill="#0c1a4a60"/>
+    <text x="90" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#93c5fd">3 Interactive Pages</text>
+  </g>
+
+  <!-- TECH BADGES -->
+  <g class="badges">
+    <rect x="72"  y="228" width="82" height="20" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="113" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">CSV / Excel</text>
+
+    <rect x="164" y="228" width="70" height="20" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="199" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Power BI</text>
+
+    <rect x="244" y="228" width="50" height="20" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="269" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">DAX</text>
+
+    <rect x="304" y="228" width="100" height="20" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="354" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">GitHub Pages</text>
+  </g>
+</svg>
