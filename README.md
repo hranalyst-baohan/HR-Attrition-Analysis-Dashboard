@@ -1,10 +1,8 @@
-# 👥 HR Analytics Dashboard
-
-> An end-to-end HR data analysis project built with **Power BI**, exploring workforce demographics, attrition trends, and employee details.
+# Data Porfolio: HR Analytics Dashboard
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 - [Objective](#objective)
 - [Tools Used](#tools-used)
 - [Dataset](#dataset)
@@ -14,7 +12,7 @@
 
 ---
 
-## 🎯 Objective
+## Objective
 
 Help HR teams and management quickly understand:
 - Overall workforce composition
@@ -23,7 +21,7 @@ Help HR teams and management quickly understand:
 
 ---
 
-## 🛠️ Tools Used
+## Tools Used
 
 | Tool | Purpose |
 |---|---|
@@ -33,7 +31,7 @@ Help HR teams and management quickly understand:
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 **Source:** HRDataset_v14.csv
 
@@ -53,7 +51,7 @@ Help HR teams and management quickly understand:
 
 ---
 
-## 📊 Dashboard Pages
+## Dashboard Pages
 
 ### 1. Overview
 Provides a high-level snapshot of the entire workforce.
@@ -94,7 +92,7 @@ A detailed, filterable table for individual employee records.
 
 ---
 
-## 💡 Key Insights
+## Key Insights
 
 - **56.59%** of the workforce is male; **43.41%** female
 - **94.86%** of employees are US Citizens
@@ -106,7 +104,7 @@ A detailed, filterable table for individual employee records.
 
 ---
 
-## 📐 DAX Measures
+## DAX Measures
 
 ```dax
 -- Total Employees
@@ -130,15 +128,15 @@ AVG Salary = AVERAGE(HRDataset[Salary])
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
-📦 hr-analytics-dashboard
- ┣ 📂 assets
- ┃ ┣ 📂 images        ← Dashboard screenshots
- ┃ ┗ 📂 dataset       ← HRDataset_v14.csv
- ┣ 📜 README.md
- ┗ 📜 _config.yml
+ hr-analytics-dashboard
+ ┣  assets
+ ┃ ┣  images        ← Dashboard screenshots
+ ┃ ┗  dataset       ← HRDataset_v14.csv
+ ┣  README.md
+ ┗  _config.yml
 ```
 
 ---
