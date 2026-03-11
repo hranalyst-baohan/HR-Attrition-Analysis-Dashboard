@@ -140,5 +140,3 @@ AVG Salary = AVERAGE(HRDataset[Salary])
 ```
 
 ---
-
-*Built as a portfolio project to demonstrate end-to-end data analysis skills using real-world HR data.*
