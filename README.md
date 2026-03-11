@@ -2,6 +2,8 @@
 
 ---
 
+![Architecture Diagram](assets/images/architecture.svg)
+
 ## Table of Contents
 - [Objective](#objective)
 - [Tools Used](#tools-used)
